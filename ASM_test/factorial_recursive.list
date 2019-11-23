@@ -1,0 +1,21 @@
+ line   address	contents
+    1  00000000  24010004	addui r1,r0,4		;N
+    2  00000004  241e0000	addui r30,r0,0		;stack pointer
+    3  00000008  0c000004	jal factorial
+    4  0000000c          	end_program:
+    5  0000000c  0bfffffc	j end_program
+    7                      ; parameter passed in r1, return value in r2
+    9  00000010          	factorial:
+   10  00000010  60220001	seqi r2,r1,1			;set r2 if N is 1
+   11  00000014  14400024	bnez r2,end_factorial	;if r2 is set return 1, otherwise...
+   12  00000018  afdf0000	sw 0(r30),r31			;save link register on the stack
+   13  0000001c  afc10004	sw 4(r30),r1			;save N on the stack
+   14  00000020  27de0008	addui r30,r30,8			;update stack pointer
+   15  00000024  2421ffff	addui r1,r1,-1			;compute N-1
+   16  00000028  0fffffe4	jal factorial			;compute factorial(N-1)
+   17  0000002c  8fc1fffc	lw r1,-4(r30)			;load N from the stack
+   18  00000030  8fdffff8	lw r31,-8(r30)			;load link register from the stack
+   19  00000034  27defff8	addui r30,r30,-8		;update stack pointer
+   20  00000038  0041101e	mult r2,r2,r1			;compute N*factorial(N-1)
+   21  0000003c          	end_factorial:
+   22  0000003c  4be00000	jr r31

@@ -1,0 +1,128 @@
+
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : DLX_BPU_TAG_FIELD_SIZE8_BPU_SET_FIELD_SIZE3_BPU_LINES_PER_SET4
+Version: F-2011.09-SP3
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: CU_OUTS_EXE_atEXE_reg[MUX_ALU_IN2_SEL]
+              (rising edge-triggered flip-flop clocked by CLOCK)
+  Endpoint: datapath_instance/BPU_instance/clk_gate_cache_reg[0][3][DATA]/latch
+            (negative level-sensitive latch clocked by CLOCK)
+  Path Group: CLOCK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  DLX_BPU_TAG_FIELD_SIZE8_BPU_SET_FIELD_SIZE3_BPU_LINES_PER_SET4
+                     5K_hvratio_1_4        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLOCK (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  CU_OUTS_EXE_atEXE_reg[MUX_ALU_IN2_SEL]/CK (DFF_X1)      0.00       0.00 r
+  CU_OUTS_EXE_atEXE_reg[MUX_ALU_IN2_SEL]/Q (DFF_X1)       0.08       0.08 f
+  U2281/Z (CLKBUF_X1)                                     0.15       0.23 f
+  U2545/Z (MUX2_X1)                                       0.17       0.40 r
+  U2449/ZN (INV_X1)                                       0.06       0.46 f
+  U2572/ZN (AOI22_X1)                                     0.09       0.55 r
+  U3027/CO (FA_X1)                                        0.09       0.64 r
+  U2447/ZN (OAI21_X1)                                     0.03       0.67 f
+  U2576/ZN (AOI222_X1)                                    0.14       0.82 r
+  U3435/CO (FA_X1)                                        0.10       0.92 r
+  U3455/CO (FA_X1)                                        0.08       0.99 r
+  U2446/ZN (OAI21_X1)                                     0.04       1.03 f
+  U2580/ZN (AOI222_X1)                                    0.16       1.19 r
+  U3492/CO (FA_X1)                                        0.09       1.28 r
+  U2445/ZN (AOI221_X1)                                    0.04       1.32 f
+  U2444/ZN (AOI221_X1)                                    0.10       1.41 r
+  U2877/CO (FA_X1)                                        0.09       1.51 r
+  U2443/ZN (AOI221_X1)                                    0.04       1.54 f
+  U2442/ZN (AOI221_X1)                                    0.12       1.67 r
+  U2441/ZN (NOR4_X1)                                      0.03       1.70 f
+  U2440/ZN (AOI221_X1)                                    0.14       1.84 r
+  U3179/CO (FA_X1)                                        0.10       1.93 r
+  U2439/ZN (AOI221_X1)                                    0.03       1.96 f
+  U2438/ZN (AOI221_X1)                                    0.10       2.06 r
+  U3292/CO (FA_X1)                                        0.09       2.15 r
+  U2435/ZN (AOI221_X1)                                    0.04       2.19 f
+  U2434/ZN (AOI221_X1)                                    0.11       2.30 r
+  U3649/S (FA_X1)                                         0.11       2.42 r
+  U3655/ZN (NAND4_X1)                                     0.05       2.47 f
+  U3657/ZN (NOR4_X1)                                      0.09       2.56 r
+  U3658/ZN (NAND4_X1)                                     0.05       2.61 f
+  U3659/ZN (NOR4_X1)                                      0.10       2.71 r
+  U3660/ZN (NAND3_X1)                                     0.04       2.75 f
+  U3662/ZN (NOR4_X1)                                      0.09       2.85 r
+  U3663/ZN (NAND4_X1)                                     0.05       2.90 f
+  U3664/ZN (NOR4_X1)                                      0.10       3.00 r
+  U3665/ZN (NAND3_X1)                                     0.06       3.05 f
+  U3666/ZN (NAND2_X1)                                     0.04       3.10 r
+  U3667/ZN (XNOR2_X1)                                     0.06       3.16 r
+  U3674/ZN (OAI211_X1)                                    0.04       3.20 f
+  U3675/ZN (OAI221_X1)                                    0.04       3.24 r
+  U3677/ZN (OAI21_X1)                                     0.04       3.28 f
+  U3691/ZN (AOI211_X1)                                    0.06       3.35 r
+  U3692/ZN (OAI221_X1)                                    0.07       3.41 f
+  U3693/ZN (AOI22_X1)                                     0.07       3.49 r
+  U3694/ZN (NAND2_X1)                                     0.03       3.52 f
+  U2453/ZN (AOI21_X1)                                     0.06       3.58 r
+  U2432/ZN (OAI211_X1)                                    0.06       3.64 f
+  U2431/ZN (NOR3_X1)                                      0.10       3.74 r
+  U2494/Z (XOR2_X2)                                       0.14       3.88 r
+  U2430/ZN (NAND2_X1)                                     0.18       4.06 f
+  U2427/ZN (INV_X1)                                       0.15       4.21 r
+  U4357/ZN (AOI22_X1)                                     0.07       4.28 f
+  U4358/ZN (OAI21_X1)                                     0.05       4.33 r
+  datapath_instance/BPU_instance/actual_addr[29] (BPU_TAG_FIELD_SIZE8_SET_FIELD_SIZE3_LINES_PER_SET4)
+                                                          0.00       4.33 r
+  datapath_instance/BPU_instance/U87/ZN (INV_X1)          0.04       4.37 f
+  datapath_instance/BPU_instance/U473/ZN (AOI22_X1)       0.07       4.44 r
+  datapath_instance/BPU_instance/U474/ZN (OAI221_X1)      0.05       4.49 f
+  datapath_instance/BPU_instance/U477/ZN (NOR4_X1)        0.09       4.58 r
+  datapath_instance/BPU_instance/U498/ZN (NAND4_X1)       0.05       4.63 f
+  datapath_instance/BPU_instance/U64/ZN (AND2_X1)         0.06       4.69 f
+  datapath_instance/BPU_instance/U33/ZN (INV_X2)          0.15       4.83 r
+  datapath_instance/BPU_instance/U63/ZN (NOR2_X1)         0.08       4.91 f
+  datapath_instance/BPU_instance/U62/ZN (AOI22_X1)        0.15       5.06 r
+  datapath_instance/BPU_instance/U620/ZN (NOR2_X1)        0.04       5.10 f
+  datapath_instance/BPU_instance/clk_gate_cache_reg[0][3][DATA]/EN (SNPS_CLOCK_GATE_HIGH_BPU_TAG_FIELD_SIZE8_SET_FIELD_SIZE3_LINES_PER_SET4_89)
+                                                          0.00       5.10 f
+  datapath_instance/BPU_instance/clk_gate_cache_reg[0][3][DATA]/test_or/ZN (OR2_X1)
+                                                          0.06       5.16 f
+  datapath_instance/BPU_instance/clk_gate_cache_reg[0][3][DATA]/latch/D (DLL_X1)
+                                                          0.01       5.17 f
+  data arrival time                                                  5.17
+
+  clock CLOCK (fall edge)                                 5.00       5.00
+  clock network delay (ideal)                             0.00       5.00
+  datapath_instance/BPU_instance/clk_gate_cache_reg[0][3][DATA]/latch/GN (DLL_X1)
+                                                          0.00       5.00 f
+  time borrowed from endpoint                             0.17       5.17
+  data required time                                                 5.17
+  --------------------------------------------------------------------------
+  data required time                                                 5.17
+  data arrival time                                                 -5.17
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+  Time Borrowing Information
+  --------------------------------------------------------------
+  CLOCK pulse width                                       5.00   
+  library setup time                                     -0.05   
+  --------------------------------------------------------------
+  max time borrow                                         4.95   
+  actual time borrow                                      0.17   
+  --------------------------------------------------------------
+
+
+1

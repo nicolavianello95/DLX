@@ -1,0 +1,27 @@
+ 
+****************************************
+Report : area
+Design : DLX_BPU_TAG_FIELD_SIZE8_BPU_SET_FIELD_SIZE3_BPU_LINES_PER_SET4
+Version: F-2011.09-SP3
+****************************************
+
+Library(s) Used:
+
+    NangateOpenCellLibrary (File: /home/mariagrazia.graziano/do/libnangate/NangateOpenCellLibrary_typical_ecsm.db)
+
+Number of ports:                          164
+Number of nets:                          3275
+Number of cells:                         2832
+Number of combinational cells:           2241
+Number of sequential cells:               570
+Number of macros:                           0
+Number of buf/inv:                        360
+Number of references:                      62
+
+Combinational area:       9288.188141
+Noncombinational area:    16454.228517
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:          25742.416658
+Total area:                 undefined
+1

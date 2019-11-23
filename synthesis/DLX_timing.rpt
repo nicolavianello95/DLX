@@ -1,0 +1,198 @@
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : DLX_BPU_TAG_FIELD_SIZE8_BPU_SET_FIELD_SIZE3_BPU_LINES_PER_SET4
+Version: F-2011.09-SP3
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: CU_OUTS_EXE_atEXE_reg[ALU_OP][4]
+              (rising edge-triggered flip-flop clocked by CLOCK)
+  Endpoint: datapath_instance/BPU_instance/clk_gate_cache_reg[0][2][DATA]/latch
+            (negative level-sensitive latch clocked by CLOCK)
+  Path Group: CLOCK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  DLX_BPU_TAG_FIELD_SIZE8_BPU_SET_FIELD_SIZE3_BPU_LINES_PER_SET4
+                     5K_hvratio_1_4        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLOCK (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  CU_OUTS_EXE_atEXE_reg[ALU_OP][4]/CK (DFFS_X1)           0.00       0.00 r
+  CU_OUTS_EXE_atEXE_reg[ALU_OP][4]/QN (DFFS_X1)           0.07       0.07 f
+  datapath_instance/control_from_CU[EXE][ALU_OP][4] (datapath_BPU_TAG_FIELD_SIZE8_BPU_SET_FIELD_SIZE3_BPU_LINES_PER_SET4)
+                                                          0.00       0.07 f
+  datapath_instance/ALU_instance/FUNC[4] (ALU_N32)        0.00       0.07 f
+  datapath_instance/ALU_instance/U44/ZN (INV_X1)          0.04       0.11 r
+  datapath_instance/ALU_instance/U31/ZN (AND2_X1)         0.04       0.15 r
+  datapath_instance/ALU_instance/U38/ZN (NAND3_X1)        0.04       0.19 f
+  datapath_instance/ALU_instance/SPARSE_TREE_ADDER/add_sub (ADDER_P4_N_BIT32_1)
+                                                          0.00       0.19 f
+  datapath_instance/ALU_instance/SPARSE_TREE_ADDER/U18/ZN (INV_X1)
+                                                          0.05       0.24 r
+  datapath_instance/ALU_instance/SPARSE_TREE_ADDER/U3/ZN (INV_X1)
+                                                          0.06       0.30 f
+  datapath_instance/ALU_instance/SPARSE_TREE_ADDER/U23/Z (XOR2_X1)
+                                                          0.12       0.42 f
+  datapath_instance/ALU_instance/SPARSE_TREE_ADDER/CLA_SPARSE_TREE/B[17] (CARRY_GENERATOR_Nbit32_1)
+                                                          0.00       0.42 f
+  datapath_instance/ALU_instance/SPARSE_TREE_ADDER/CLA_SPARSE_TREE/Block_PG_NET_18/op2 (PG_NETWORK_975)
+                                                          0.00       0.42 f
+  datapath_instance/ALU_instance/SPARSE_TREE_ADDER/CLA_SPARSE_TREE/Block_PG_NET_18/U2/Z (XOR2_X1)
+                                                          0.09       0.51 f
+  datapath_instance/ALU_instance/SPARSE_TREE_ADDER/CLA_SPARSE_TREE/Block_PG_NET_18/p (PG_NETWORK_975)
+                                                          0.00       0.51 f
+  datapath_instance/ALU_instance/SPARSE_TREE_ADDER/CLA_SPARSE_TREE/Block_Stage_ONE_8/P_ik (PG_BLOCK_965)
+                                                          0.00       0.51 f
+  datapath_instance/ALU_instance/SPARSE_TREE_ADDER/CLA_SPARSE_TREE/Block_Stage_ONE_8/U2/ZN (AOI21_X1)
+                                                          0.05       0.57 r
+  datapath_instance/ALU_instance/SPARSE_TREE_ADDER/CLA_SPARSE_TREE/Block_Stage_ONE_8/U3/ZN (INV_X1)
+                                                          0.03       0.59 f
+  datapath_instance/ALU_instance/SPARSE_TREE_ADDER/CLA_SPARSE_TREE/Block_Stage_ONE_8/G_ij (PG_BLOCK_965)
+                                                          0.00       0.59 f
+  datapath_instance/ALU_instance/SPARSE_TREE_ADDER/CLA_SPARSE_TREE/Block_Stage_TWO_4/G_k1j (PG_BLOCK_954)
+                                                          0.00       0.59 f
+  datapath_instance/ALU_instance/SPARSE_TREE_ADDER/CLA_SPARSE_TREE/Block_Stage_TWO_4/U2/ZN (AOI21_X1)
+                                                          0.04       0.63 r
+  datapath_instance/ALU_instance/SPARSE_TREE_ADDER/CLA_SPARSE_TREE/Block_Stage_TWO_4/U3/ZN (INV_X1)
+                                                          0.03       0.66 f
+  datapath_instance/ALU_instance/SPARSE_TREE_ADDER/CLA_SPARSE_TREE/Block_Stage_TWO_4/G_ij (PG_BLOCK_954)
+                                                          0.00       0.66 f
+  datapath_instance/ALU_instance/SPARSE_TREE_ADDER/CLA_SPARSE_TREE/Block_Stage_THREE_2/G_k1j (PG_BLOCK_949)
+                                                          0.00       0.66 f
+  datapath_instance/ALU_instance/SPARSE_TREE_ADDER/CLA_SPARSE_TREE/Block_Stage_THREE_2/U2/ZN (AOI21_X1)
+                                                          0.04       0.71 r
+  datapath_instance/ALU_instance/SPARSE_TREE_ADDER/CLA_SPARSE_TREE/Block_Stage_THREE_2/U3/ZN (INV_X1)
+                                                          0.03       0.74 f
+  datapath_instance/ALU_instance/SPARSE_TREE_ADDER/CLA_SPARSE_TREE/Block_Stage_THREE_2/G_ij (PG_BLOCK_949)
+                                                          0.00       0.74 f
+  datapath_instance/ALU_instance/SPARSE_TREE_ADDER/CLA_SPARSE_TREE/Block_stage_FOUR_2_0/G_k1j (PG_BLOCK_947)
+                                                          0.00       0.74 f
+  datapath_instance/ALU_instance/SPARSE_TREE_ADDER/CLA_SPARSE_TREE/Block_stage_FOUR_2_0/U2/ZN (AOI21_X1)
+                                                          0.05       0.79 r
+  datapath_instance/ALU_instance/SPARSE_TREE_ADDER/CLA_SPARSE_TREE/Block_stage_FOUR_2_0/U3/ZN (INV_X1)
+                                                          0.03       0.81 f
+  datapath_instance/ALU_instance/SPARSE_TREE_ADDER/CLA_SPARSE_TREE/Block_stage_FOUR_2_0/G_ij (PG_BLOCK_947)
+                                                          0.00       0.81 f
+  datapath_instance/ALU_instance/SPARSE_TREE_ADDER/CLA_SPARSE_TREE/Block_stage_FIVE_6/G_ik (G_BLOCK_257)
+                                                          0.00       0.81 f
+  datapath_instance/ALU_instance/SPARSE_TREE_ADDER/CLA_SPARSE_TREE/Block_stage_FIVE_6/U2/ZN (AOI21_X1)
+                                                          0.05       0.87 r
+  datapath_instance/ALU_instance/SPARSE_TREE_ADDER/CLA_SPARSE_TREE/Block_stage_FIVE_6/U1/ZN (INV_X1)
+                                                          0.04       0.91 f
+  datapath_instance/ALU_instance/SPARSE_TREE_ADDER/CLA_SPARSE_TREE/Block_stage_FIVE_6/G_ij (G_BLOCK_257)
+                                                          0.00       0.91 f
+  datapath_instance/ALU_instance/SPARSE_TREE_ADDER/CLA_SPARSE_TREE/Cout[7] (CARRY_GENERATOR_Nbit32_1)
+                                                          0.00       0.91 f
+  datapath_instance/ALU_instance/SPARSE_TREE_ADDER/CSA/CARRY_SELECT[7] (SUMGENERATOR_Nblocks8_bits_per_block4_1)
+                                                          0.00       0.91 f
+  datapath_instance/ALU_instance/SPARSE_TREE_ADDER/CSA/block_n_8/Ci (carry_select_block_N4_241)
+                                                          0.00       0.91 f
+  datapath_instance/ALU_instance/SPARSE_TREE_ADDER/CSA/block_n_8/SUM_SELECT_MUX/SEL (MUX_2to1_N4_241)
+                                                          0.00       0.91 f
+  datapath_instance/ALU_instance/SPARSE_TREE_ADDER/CSA/block_n_8/SUM_SELECT_MUX/U2/Z (MUX2_X1)
+                                                          0.08       0.98 f
+  datapath_instance/ALU_instance/SPARSE_TREE_ADDER/CSA/block_n_8/SUM_SELECT_MUX/Y[1] (MUX_2to1_N4_241)
+                                                          0.00       0.98 f
+  datapath_instance/ALU_instance/SPARSE_TREE_ADDER/CSA/block_n_8/S[1] (carry_select_block_N4_241)
+                                                          0.00       0.98 f
+  datapath_instance/ALU_instance/SPARSE_TREE_ADDER/CSA/SUM[29] (SUMGENERATOR_Nblocks8_bits_per_block4_1)
+                                                          0.00       0.98 f
+  datapath_instance/ALU_instance/SPARSE_TREE_ADDER/SUM[29] (ADDER_P4_N_BIT32_1)
+                                                          0.00       0.98 f
+  datapath_instance/ALU_instance/LGC_BLOCK/SUM[29] (LOGIC_BLOCK_N32)
+                                                          0.00       0.98 f
+  datapath_instance/ALU_instance/LGC_BLOCK/U22/ZN (NOR2_X1)
+                                                          0.04       1.03 r
+  datapath_instance/ALU_instance/LGC_BLOCK/U13/ZN (AND4_X1)
+                                                          0.07       1.09 r
+  datapath_instance/ALU_instance/LGC_BLOCK/U12/ZN (NAND2_X1)
+                                                          0.05       1.14 f
+  datapath_instance/ALU_instance/LGC_BLOCK/U10/ZN (NAND2_X1)
+                                                          0.05       1.19 r
+  datapath_instance/ALU_instance/LGC_BLOCK/U14/ZN (XNOR2_X1)
+                                                          0.06       1.25 r
+  datapath_instance/ALU_instance/LGC_BLOCK/A_LE_B[0] (LOGIC_BLOCK_N32)
+                                                          0.00       1.25 r
+  datapath_instance/ALU_instance/U36/ZN (NAND2_X1)        0.03       1.28 f
+  datapath_instance/ALU_instance/U102/Z (MUX2_X1)         0.07       1.35 f
+  datapath_instance/ALU_instance/U101/ZN (OAI211_X1)      0.04       1.39 r
+  datapath_instance/ALU_instance/OUT_ALU[0] (ALU_N32)     0.00       1.39 r
+  datapath_instance/MUX_MULT/IN0[0] (MUX_2to1_N32_5)      0.00       1.39 r
+  datapath_instance/MUX_MULT/U24/ZN (NAND2_X1)            0.03       1.42 f
+  datapath_instance/MUX_MULT/U22/ZN (NAND2_X1)            0.03       1.45 r
+  datapath_instance/MUX_MULT/Y[0] (MUX_2to1_N32_5)        0.00       1.45 r
+  datapath_instance/MUX_RF_OUT1_fw/IN1[0] (MUX_8to1_N32_0)
+                                                          0.00       1.45 r
+  datapath_instance/MUX_RF_OUT1_fw/U28/ZN (NAND2_X1)      0.03       1.48 f
+  datapath_instance/MUX_RF_OUT1_fw/U26/ZN (NAND2_X1)      0.04       1.52 r
+  datapath_instance/MUX_RF_OUT1_fw/Y[0] (MUX_8to1_N32_0)
+                                                          0.00       1.52 r
+  datapath_instance/branch_comp_instance/DATA_IN[0] (branch_comp_N32)
+                                                          0.00       1.52 r
+  datapath_instance/branch_comp_instance/U12/ZN (NOR2_X1)
+                                                          0.03       1.55 f
+  datapath_instance/branch_comp_instance/U11/ZN (XNOR2_X1)
+                                                          0.06       1.61 f
+  datapath_instance/branch_comp_instance/BRANCH_IS_TAKEN (branch_comp_N32)
+                                                          0.00       1.61 f
+  datapath_instance/MUX_actual_addr/SEL (MUX_2to1_N32_9)
+                                                          0.00       1.61 f
+  datapath_instance/MUX_actual_addr/U2/Z (CLKBUF_X3)      0.08       1.69 f
+  datapath_instance/MUX_actual_addr/U27/Z (MUX2_X1)       0.10       1.79 r
+  datapath_instance/MUX_actual_addr/Y[29] (MUX_2to1_N32_9)
+                                                          0.00       1.79 r
+  datapath_instance/BPU_instance/actual_addr[29] (BPU_TAG_FIELD_SIZE8_SET_FIELD_SIZE3_LINES_PER_SET4)
+                                                          0.00       1.79 r
+  datapath_instance/BPU_instance/U323/ZN (NOR2_X1)        0.03       1.82 f
+  datapath_instance/BPU_instance/U321/ZN (NOR2_X1)        0.04       1.85 r
+  datapath_instance/BPU_instance/U667/ZN (OAI221_X1)      0.05       1.90 f
+  datapath_instance/BPU_instance/U375/ZN (NOR2_X1)        0.06       1.96 r
+  datapath_instance/BPU_instance/U372/ZN (NAND4_X1)       0.05       2.01 f
+  datapath_instance/BPU_instance/U370/ZN (OAI21_X1)       0.06       2.07 r
+  datapath_instance/BPU_instance/U58/ZN (INV_X1)          0.03       2.11 f
+  datapath_instance/BPU_instance/U198/ZN (AND2_X1)        0.05       2.16 f
+  datapath_instance/BPU_instance/U195/ZN (AOI21_X1)       0.05       2.21 r
+  datapath_instance/BPU_instance/U193/Z (BUF_X1)          0.05       2.27 r
+  datapath_instance/BPU_instance/U788/ZN (NOR2_X1)        0.03       2.30 f
+  datapath_instance/BPU_instance/clk_gate_cache_reg[0][2][DATA]/EN (SNPS_CLOCK_GATE_HIGH_BPU_TAG_FIELD_SIZE8_SET_FIELD_SIZE3_LINES_PER_SET4_92)
+                                                          0.00       2.30 f
+  datapath_instance/BPU_instance/clk_gate_cache_reg[0][2][DATA]/test_or/ZN (OR2_X1)
+                                                          0.05       2.35 f
+  datapath_instance/BPU_instance/clk_gate_cache_reg[0][2][DATA]/latch/D (DLL_X1)
+                                                          0.01       2.36 f
+  data arrival time                                                  2.36
+
+  clock CLOCK (fall edge)                                 1.22       1.22
+  clock network delay (ideal)                             0.00       1.22
+  datapath_instance/BPU_instance/clk_gate_cache_reg[0][2][DATA]/latch/GN (DLL_X1)
+                                                          0.00       1.22 f
+  time borrowed from endpoint                             1.15       2.36
+  data required time                                                 2.36
+  --------------------------------------------------------------------------
+  data required time                                                 2.36
+  data arrival time                                                 -2.36
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+  Time Borrowing Information
+  --------------------------------------------------------------
+  CLOCK pulse width                                       1.22   
+  library setup time                                     -0.05   
+  --------------------------------------------------------------
+  max time borrow                                         1.17   
+  actual time borrow                                      1.15   
+  --------------------------------------------------------------
+
+
+1

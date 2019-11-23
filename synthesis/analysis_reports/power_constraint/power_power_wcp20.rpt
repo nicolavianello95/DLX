@@ -1,0 +1,53 @@
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : DLX_BPU_TAG_FIELD_SIZE8_BPU_SET_FIELD_SIZE3_BPU_LINES_PER_SET4
+Version: F-2011.09-SP3
+****************************************
+
+
+Library(s) Used:
+
+    NangateOpenCellLibrary (File: /home/mariagrazia.graziano/do/libnangate/NangateOpenCellLibrary_typical_ecsm.db)
+
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+Design        Wire Load Model            Library
+------------------------------------------------
+DLX_BPU_TAG_FIELD_SIZE8_BPU_SET_FIELD_SIZE3_BPU_LINES_PER_SET4
+                       5K_hvratio_1_4    NangateOpenCellLibrary
+
+
+Global Operating Voltage = 1.1  
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000ff
+    Time Units = 1ns
+    Dynamic Power Units = 1uW    (derived from V,C,T units)
+    Leakage Power Units = 1nW
+
+
+  Cell Internal Power  = 290.0875 uW   (74%)
+  Net Switching Power  = 103.0838 uW   (26%)
+                         ---------
+Total Dynamic Power    = 393.1713 uW  (100%)
+
+Cell Leakage Power     = 441.7484 uW
+
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network     42.5567           42.7154        9.6282e+03           94.9003  (  11.37%)
+register         225.9552            8.1027        2.3900e+05          473.0552  (  56.66%)
+sequential         0.6478        5.3717e-02        1.4469e+03            2.1484  (   0.26%)
+combinational     20.9275           52.2123        1.9167e+05          264.8139  (  31.72%)
+--------------------------------------------------------------------------------------------------
+Total            290.0872 uW       103.0842 uW     4.4175e+05 nW       834.9179 uW
+1
