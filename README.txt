@@ -26,3 +26,4 @@ used for the simulation in Modelsim.
 
 final_report: The report of our work in pdf format.
 
+schematics: some block diagrams and RTL schematics of the design.
